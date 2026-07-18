@@ -697,33 +697,6 @@ export const stones = [
     ],
   }),
 
-  createStone({
-    slug: 'pierre-beige-taza-rkab',
-    name: 'Pierre Beige Taza (Rkab)',
-    category: 'Pierre Naturelle & Taza',
-    finish: 'Naturelle',
-    tone: 'Beige chaleureux',
-    shortDescription:
-      'Une pierre traditionnelle de Taza au format Rkab pour des réalisations authentiques.',
-    description:
-      'La Pierre Beige Taza Rkab est utilisée dans les revêtements traditionnels et les compositions décoratives. Son format et sa teinte naturelle facilitent la création de motifs élégants.',
-    tagline:
-      'Pierre Beige Taza Rkab : tradition marocaine et qualité naturelle.',
-    applications: [
-      'Murs',
-      'Façades',
-      'Soubassements',
-      'Jardins',
-      'Entrées',
-      'Décoration traditionnelle',
-    ],
-    advantages: [
-      'Format traditionnel',
-      'Teinte chaleureuse',
-      'Pose décorative',
-      'Pierre résistante',
-    ],
-  }),
 
   createStone({
     slug: 'eclate-volubilis',
