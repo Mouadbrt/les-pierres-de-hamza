@@ -628,34 +628,6 @@ export const stones = [
   }),
 
   createStone({
-    slug: 'eclate-beige-taza',
-    name: 'Éclaté Beige Taza',
-    category: 'Pierre Naturelle & Taza',
-    finish: 'Éclatée',
-    tone: 'Beige naturel',
-    shortDescription:
-      'Une pierre beige éclatée au relief naturel pour murs et façades.',
-    description:
-      'L’Éclaté Beige Taza est obtenu par séparation mécanique de la pierre afin de révéler son relief intérieur. Cette finition brute crée un jeu d’ombres et une texture particulièrement décorative.',
-    tagline:
-      'Éclaté Beige Taza : relief naturel et authenticité architecturale.',
-    applications: [
-      'Façades',
-      'Murs décoratifs',
-      'Clôtures',
-      'Colonnes',
-      'Jardins',
-      'Cheminées',
-    ],
-    advantages: [
-      'Relief prononcé',
-      'Aspect authentique',
-      'Jeu naturel de lumière',
-      'Grande résistance',
-    ],
-  }),
-
-  createStone({
     slug: 'pierre-naturelle',
     name: 'Pierre Naturelle',
     category: 'Pierre Naturelle & Taza',
