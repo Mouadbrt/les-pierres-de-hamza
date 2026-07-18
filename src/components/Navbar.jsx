@@ -47,8 +47,12 @@ export default function Navbar() {
             aria-label="Les Pierres de Hamza"
           >
             <img
-              src="/images/logo.png"
+              src="/images/logo-160.webp"
               alt="Les Pierres de Hamza"
+              width="160"
+              height="160"
+              decoding="async"
+              fetchPriority="high"
               className={`h-12 w-auto max-w-[215px] object-contain transition duration-500 sm:h-14 sm:max-w-[255px] lg:h-16`}
             />
             <span className="whitespace-nowrap">Les Pierres de Hamza</span>

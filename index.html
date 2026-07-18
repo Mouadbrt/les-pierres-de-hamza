@@ -2,13 +2,9 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#1c1b19" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
 
     <meta
       name="description"
@@ -16,35 +12,124 @@
     />
 
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Les Pierres de Hamza" />
+    <meta property="og:title" content="Les Pierres de Hamza | Pierre naturelle de Taza" />
+    <meta property="og:description" content="La beauté naturelle de Taza au service de vos projets." />
+    <meta property="og:image" content="/images/logo.png" />
+    <meta property="og:locale" content="fr_MA" />
 
-    <meta
-      property="og:site_name"
-      content="Les Pierres de Hamza"
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Les Pierres de Hamza | Pierre naturelle de Taza" />
+    <meta name="twitter:description" content="La beauté naturelle de Taza au service de vos projets." />
+    <meta name="twitter:image" content="/images/logo.png" />
+
+    <link rel="icon" type="image/png" href="/images/icon.png" />
+    <link rel="apple-touch-icon" href="/images/icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap"
     />
 
-    <meta
-      property="og:title"
-      content="Les Pierres de Hamza | Pierre naturelle de Taza"
-    />
+    <title>Les Pierres de Hamza | Pierre naturelle de Taza</title>
 
-    <meta
-      property="og:description"
-      content="La beauté naturelle de Taza au service de vos projets."
-    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Les Pierres de Hamza",
+        "description": "Spécialiste de la pierre naturelle de Taza au Maroc pour façades, sols, murs, terrasses et projets architecturaux.",
+        "telephone": "+212767870765",
+        "email": "Lespairresdehamza@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Taza",
+          "addressCountry": "MA"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Morocco"
+        },
+        "sameAs": [
+          "https://www.instagram.com/hamza_pierres",
+          "https://www.facebook.com/share/1DDzoU6fzq/"
+        ]
+      }
+    </script>
 
-    <link rel="icon" type="image/png" href="/icon.png" />
+    <style>
+      #app-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: grid;
+        place-items: center;
+        background: #11110f;
+        color: #f5f2ea;
+        transition: opacity 420ms ease, visibility 420ms ease;
+      }
 
-    <title>
-      Les Pierres de Hamza | Pierre naturelle de Taza
-    </title>
+      #app-loader.app-loader--hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .app-loader__content {
+        display: grid;
+        justify-items: center;
+        gap: 18px;
+        padding: 24px;
+        text-align: center;
+      }
+
+      .app-loader__brand {
+        font: 600 12px/1.4 Inter, Arial, sans-serif;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+      }
+
+      .app-loader__line {
+        width: min(220px, 58vw);
+        height: 1px;
+        overflow: hidden;
+        background: rgba(245, 242, 234, 0.2);
+      }
+
+      .app-loader__line::after {
+        content: '';
+        display: block;
+        width: 45%;
+        height: 100%;
+        background: #f5f2ea;
+        animation: loader-line 1s cubic-bezier(.4, 0, .2, 1) infinite;
+      }
+
+      @keyframes loader-line {
+        0% { transform: translateX(-110%); }
+        100% { transform: translateX(330%); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .app-loader__line::after { animation-duration: 2s; }
+      }
+    </style>
   </head>
 
   <body>
+    <div id="app-loader" role="status" aria-live="polite" aria-label="Chargement du site">
+      <div class="app-loader__content">
+        <span class="app-loader__brand">Les Pierres de Hamza</span>
+        <span class="app-loader__line" aria-hidden="true"></span>
+      </div>
+    </div>
+
     <div id="root"></div>
 
-    <script
-      type="module"
-      src="/src/main.jsx"
-    ></script>
+    <noscript>Activez JavaScript pour consulter le site Les Pierres de Hamza.</noscript>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

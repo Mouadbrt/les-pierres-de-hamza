@@ -16,7 +16,22 @@ export default function StoneDetail() {
 
   return (
     <main className="min-h-screen bg-ivory pt-28 sm:pt-32 lg:pt-36">
-      <PageMeta title={`${stone.name} — Les Pierres de Hamza`} description={stone.shortDescription} />
+      <PageMeta
+        title={`${stone.name} — Les Pierres de Hamza`}
+        description={stone.shortDescription}
+        image={stone.images[0]}
+        type="product"
+        schema={{
+          '@context': 'https://schema.org',
+          '@type': 'Product',
+          name: stone.name,
+          description: stone.shortDescription,
+          image: stone.images,
+          category: stone.category,
+          material: 'Pierre naturelle',
+          brand: { '@type': 'Brand', name: 'Les Pierres de Hamza' },
+        }}
+      />
       <section className="px-4 pb-20 pt-8 sm:px-6 lg:px-8 lg:pb-28">
         <div className="mx-auto max-w-8xl">
           <Link to="/produits" className="mb-8 inline-flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-black/55 hover:text-black"><FiArrowLeft /> {t('products.back')}</Link>

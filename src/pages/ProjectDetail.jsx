@@ -16,11 +16,26 @@ export default function ProjectDetail() {
 
   return (
     <main className="min-h-screen bg-ivory pt-28 sm:pt-32 lg:pt-36">
-      <PageMeta title={`${project.title} — Les Pierres de Hamza`} description={project.shortDescription} />
+      <PageMeta
+        title={`${project.title} — Les Pierres de Hamza`}
+        description={project.shortDescription}
+        image={project.image}
+        type="article"
+        schema={{
+          '@context': 'https://schema.org',
+          '@type': 'CreativeWork',
+          name: project.title,
+          description: project.shortDescription,
+          image: project.image,
+          about: project.material,
+          locationCreated: project.origin,
+          creator: { '@type': 'Organization', name: 'Les Pierres de Hamza' },
+        }}
+      />
       <section className="px-4 pb-20 pt-8 sm:px-6 lg:px-8 lg:pb-28">
         <div className="mx-auto max-w-8xl">
           <Link to="/projets" className="mb-8 inline-flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-black/55 hover:text-black"><FiArrowLeft /> {t('projects.back')}</Link>
-          <div className="aspect-[16/10] max-h-[78vh] overflow-hidden bg-stone/20"><SmartImage src={project.image} alt={`${project.title} — ${project.material}`} className="h-full w-full object-cover" /></div>
+          <div className="aspect-[16/10] max-h-[78vh] overflow-hidden bg-stone/20"><SmartImage src={project.image} alt={`${project.title} — ${project.material}`} loading="eager" fetchPriority="high" className="h-full w-full object-cover" /></div>
 
           <div className="grid gap-10 border-b border-black/15 py-10 lg:grid-cols-[1.25fr_.75fr] lg:gap-16 lg:py-16">
             <div>

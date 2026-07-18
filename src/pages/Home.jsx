@@ -14,7 +14,7 @@ import { projects } from '../data/projects'
 import { stones } from '../data/stones'
 import { useLanguage } from '../i18n/LanguageContext'
 
-const aboutImage = 'https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1800&q=84'
+const aboutImage = '/images/stones/pierre-naturelle-1.jpg'
 
 function Stat({ value, label, index }) {
   const ref = useRef(null)
@@ -35,7 +35,7 @@ export default function Home() {
 
   return (
     <>
-      <PageMeta title="Les Pierres de Hamza — Pierre naturelle de Taza au Maroc" description={t('products.metaDescription')} />
+      <PageMeta title="Les Pierres de Hamza — Pierre naturelle de Taza au Maroc" description="Pierre naturelle de Taza au Maroc pour façades, sols, murs, terrasses, escaliers et projets architecturaux durables." />
       <Hero />
       <Marquee />
 

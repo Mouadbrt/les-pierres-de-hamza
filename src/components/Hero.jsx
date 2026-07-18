@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
 
 const heroVideo = '/images/videos/hero.mp4'
+const heroPoster = '/images/videos/hero-poster.jpg'
 
 export default function Hero() {
   const { t } = useLanguage()
@@ -14,7 +15,17 @@ export default function Hero() {
   return (
     <section className="relative min-h-[100svh] overflow-hidden bg-charcoal text-white">
       <motion.div className="absolute inset-0" style={{ y: imageY, scale: imageScale }}>
-        <video autoPlay muted loop playsInline className="absolute inset-0 h-full w-full object-cover" src={heroVideo} />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster={heroPoster}
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover"
+          src={heroVideo}
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal/74 via-charcoal/25 to-charcoal/55" />
       </motion.div>
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/15" />

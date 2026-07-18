@@ -12,7 +12,7 @@ export default function ProductGallery({ images, alt }) {
   return (
     <div>
       <button type="button" onClick={() => setLightboxOpen(true)} className="group relative block aspect-[5/4] w-full overflow-hidden bg-stone/20 text-start" aria-label={`${t('gallery.open')} ${alt}`}>
-        <SmartImage src={images[activeIndex]} alt={`${alt} — ${t('gallery.mainImage')}`} className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.025]" />
+        <SmartImage src={images[activeIndex]} alt={`${alt} — ${t('gallery.mainImage')}`} loading="eager" fetchPriority="high" className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.025]" />
         <span className="absolute bottom-4 right-4 grid size-11 place-items-center rounded-full bg-ivory text-ink shadow-lg transition group-hover:scale-105"><FiMaximize2 /></span>
       </button>
 

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -93,6 +91,28 @@ img {
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-25%); }
+}
+
+
+.route-loader-line {
+  position: relative;
+  height: 1px;
+  overflow: hidden;
+  background: rgb(17 17 15 / 18%);
+}
+
+.route-loader-line::after {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  width: 42%;
+  background: #11110f;
+  animation: route-loader 900ms cubic-bezier(.4, 0, .2, 1) infinite;
+}
+
+@keyframes route-loader {
+  from { transform: translateX(-110%); }
+  to { transform: translateX(340%); }
 }
 
 .scrollbar-none {

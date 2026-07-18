@@ -7,7 +7,7 @@ export default function NotFound() {
   const { t } = useLanguage()
   return (
     <main className="flex min-h-screen items-center bg-ink px-4 pb-20 pt-32 text-white sm:px-6 lg:px-8">
-      <PageMeta title={t('notFound.metaTitle')} description={t('notFound.metaDescription')} />
+      <PageMeta title={t('notFound.metaTitle')} description={t('notFound.metaDescription')} noIndex />
       <div className="mx-auto w-full max-w-8xl">
         <span className="eyebrow text-white/45">{t('notFound.label')}</span>
         <h1 className="mt-5 font-display text-[clamp(6rem,18vw,18rem)] leading-[0.72] tracking-[-0.07em]">404</h1>

@@ -1,6 +1,3 @@
-const u = (id, w = 1800) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=84`
-
 export const projects = [
   {
     slug: 'habillage-facades-pierre-taza',
@@ -39,7 +36,7 @@ export const projects = [
     material: 'Travertin & Pierre de Taza',
     origin: 'Maroc',
     usage: 'Terrasses, jardins, dallages',
-    image: u('photo-1600566753086-00f18fb6b3ea'),
+    image: '/images/stones/pierre-naturelle-1.jpg',
   },
   {
     slug: 'murs-decoratifs-pierre-naturelle',

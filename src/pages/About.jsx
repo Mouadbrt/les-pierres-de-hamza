@@ -5,9 +5,9 @@ import SmartImage from '../components/SmartImage'
 import { useLanguage } from '../i18n/LanguageContext'
 
 const images = [
-  'https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1800&q=84',
-  'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1800&q=84',
-  'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=84',
+  '/images/stones/PIERRE-GRISE-DE-TAZA.jpg',
+  '/images/stones/pierre-taza-beige-eclatee-1.jpg',
+  '/images/stones/Terrasse en Travertin Volubilis.jpg',
 ]
 
 export default function About() {
